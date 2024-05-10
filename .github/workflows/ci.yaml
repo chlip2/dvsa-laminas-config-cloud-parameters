@@ -4,7 +4,6 @@ on:
   pull_request:
   schedule:
     - cron: '0 0 * * 1'
-#chlip2/olcs-backend/.github/workflows/php-security.yml@feature-bl-16691-update-actions-to-node-20
 jobs:
   security:
     uses: chlip2/dvsa-laminas-config-cloud-parameters/.github/workflows/php-library-security.yml@feature-bl-16691-update-actions-to-node-20
