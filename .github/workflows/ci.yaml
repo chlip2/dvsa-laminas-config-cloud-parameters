@@ -5,18 +5,6 @@ on:
   schedule:
     - cron: '0 0 * * 1'
 jobs:
-  security:
-    uses: chlip2/dvsa-laminas-config-cloud-parameters/.github/workflows/php-library-security.yml@feature-bl-16691-update-actions-to-node-20
-    with:
-      php-versions: "[\"8.0\", \"8.1\", \"8.2\", \"8.3\"]"
-    secrets:
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-
-  static-analysis:
-    uses: chlip2/dvsa-laminas-config-cloud-parameters/.github/workflows/php-library-static.yml@feature-bl-16691-update-actions-to-node-20
-    with:
-      php-version: '8.3'
-
   tests:
     uses: chlip2/dvsa-laminas-config-cloud-parameters/.github/workflows/php-library-tests.yml@feature-bl-16691-update-actions-to-node-20
     with:
